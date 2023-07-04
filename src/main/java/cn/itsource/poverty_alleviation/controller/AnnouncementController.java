@@ -45,7 +45,7 @@ public class AnnouncementController {
     @GetMapping(value = "/{announcementId}")
     public AjaxResult getInfo(@PathVariable("announcementId") Integer announcementId)
     {
-        return success(announcementService.selectAnnouncementInfoByAnnouncementId(announcementId));
+        return success(announcementService.selectAnnouncementInfoById(announcementId));
     }
 
 }

@@ -21,7 +21,7 @@
         ID, title, content, publisher, publish_time, start_time, end_time, priority, status, type
     </sql>
 
-    <select id="selectAnnouncementInfoByAnnouncementId" resultType="cn.itsource.poverty_alleviation.domain.Announcement"
+    <select id="selectAnnouncementInfoById" resultType="cn.itsource.poverty_alleviation.domain.Announcement"
             parameterType="java.lang.Integer">
         select * from announcement where id = #{announcementId}
     </select>

@@ -15,5 +15,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface AnnouncementMapper extends BaseMapper<Announcement> {
 
-    Announcement selectAnnouncementInfoByAnnouncementId(Integer announcementId);
+    Announcement selectAnnouncementInfoById(Integer announcementId);
 }

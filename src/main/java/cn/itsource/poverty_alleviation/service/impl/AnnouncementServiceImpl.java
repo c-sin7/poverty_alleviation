@@ -21,7 +21,7 @@ public class AnnouncementServiceImpl extends ServiceImpl<AnnouncementMapper, Ann
     private AnnouncementMapper announcementMapper;
 
     @Override
-    public Announcement selectAnnouncementInfoByAnnouncementId(Integer announcementId) {
+    public Announcement selectAnnouncementInfoById(Integer announcementId) {
         return announcementMapper.selectAnnouncementInfoByAnnouncementId(announcementId);
     }
 }
