@@ -2,6 +2,12 @@ package cn.itsource.poverty_alleviation.controller;
 
 import cn.itsource.poverty_alleviation.domain.common.AjaxResult;
 import cn.itsource.poverty_alleviation.domain.common.HttpStatus;
+import cn.itsource.poverty_alleviation.domain.common.page.PageDomain;
+import cn.itsource.poverty_alleviation.domain.common.page.TableDataInfo;
+import cn.itsource.poverty_alleviation.domain.common.page.TableSupport;
+import cn.itsource.poverty_alleviation.utils.PageUtils;
+import cn.itsource.poverty_alleviation.utils.SqlUtil;
+import cn.itsource.poverty_alleviation.utils.StringUtils;
 import com.alibaba.fastjson2.util.DateUtils;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -149,7 +155,7 @@ public class BaseController
      * @param result 结果
      * @return 操作结果
      */
-    protected AjaxResult toAjax(boolean result)
+    protected static AjaxResult toAjax(boolean result)
     {
         return result ? success() : error();
     }
@@ -162,35 +168,5 @@ public class BaseController
         return StringUtils.format("redirect:{}", url);
     }
 
-    /**
-     * 获取用户缓存信息
-     */
-    public LoginUser getLoginUser()
-    {
-        return SecurityUtils.getLoginUser();
-    }
 
-    /**
-     * 获取登录用户id
-     */
-    public Long getUserId()
-    {
-        return getLoginUser().getUserId();
-    }
-
-    /**
-     * 获取登录部门id
-     */
-    public Long getDeptId()
-    {
-        return getLoginUser().getDeptId();
-    }
-
-    /**
-     * 获取登录用户名
-     */
-    public String getUsername()
-    {
-        return getLoginUser().getUsername();
-    }
 }

@@ -1,6 +1,5 @@
 package cn.itsource.poverty_alleviation.controller;
 
-
 import cn.itsource.poverty_alleviation.domain.Announcement;
 import cn.itsource.poverty_alleviation.domain.common.AjaxResult;
 import cn.itsource.poverty_alleviation.service.AnnouncementService;
@@ -57,6 +56,7 @@ public class AnnouncementController {
 
     /**
      * 根据id删除公告
+     *
      * @param announcementId
      * @return
      */
@@ -64,7 +64,7 @@ public class AnnouncementController {
     @DeleteMapping("/{announcementId}")
     public AjaxResult removeById(@PathVariable Integer announcementId) {
         boolean result = announcementService.removeById(announcementId);
-        return toAjax(result);
+        return BaseController.toAjax(result);
     }
 
     /**
@@ -82,8 +82,8 @@ public class AnnouncementController {
 
     @ApiOperation("根据id更改公告信息")
     @PutMapping
-    public AjaxResult update(@RequestBody Announcement announcement){
+    public AjaxResult update(@RequestBody Announcement announcement) {
         UpdateChainWrapper<Announcement> update = announcementService.update();
-        return toAjax(update);
+        return success(update);
     }
 }
