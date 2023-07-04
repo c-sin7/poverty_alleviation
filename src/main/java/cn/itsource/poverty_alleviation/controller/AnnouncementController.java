@@ -1,12 +1,21 @@
 package cn.itsource.poverty_alleviation.controller;
 
 
+import cn.itsource.poverty_alleviation.domain.Announcement;
+import cn.itsource.poverty_alleviation.domain.common.AjaxResult;
 import cn.itsource.poverty_alleviation.service.AnnouncementService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+import static cn.itsource.poverty_alleviation.domain.common.AjaxResult.success;
 
 /**
  * <p>
@@ -22,4 +31,23 @@ import org.springframework.web.bind.annotation.RestController;
 public class AnnouncementController {
     @Autowired
     private AnnouncementService announcementService;
+
+    @ApiOperation("查询信息")
+//    @PreAuthorize("@ss.hasPermi('announcement:info:list')")
+    @GetMapping("/list")
+    public AjaxResult list(Announcement announcement)
+    {
+//        startPage();
+        List<Announcement> list = announcementService.list();
+//        return getDataTable(list);
+        return success(list);
+    }
+
+    @ApiOperation("根据id获取公告信息详情")
+    @GetMapping(value = "/{announcementId}")
+    public AjaxResult getInfo(@PathVariable("announcementId") Integer announcementId)
+    {
+        return success(announcementService.selectAnnouncementInfoByAnnouncementId(announcementId));
+    }
+
 }
