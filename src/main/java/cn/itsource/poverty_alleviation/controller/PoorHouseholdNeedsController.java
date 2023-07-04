@@ -1,7 +1,9 @@
 package cn.itsource.poverty_alleviation.controller;
 
 
+import cn.itsource.poverty_alleviation.service.PoorHouseholdNeedsService;
 import io.swagger.annotations.Api;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -18,5 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/poor-household-needs")
 public class PoorHouseholdNeedsController {
+    @Autowired
+    private PoorHouseholdNeedsService poorHouseholdNeedsService;
 
 }
