@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itsource.poverty_alleviation.mapper.PoorHouseholdNeedsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.itsource.poverty_alleviation.domain.PoorHouseholdNeeds">
+        <id column="ID" property="id" />
+        <result column="social_insurance" property="socialInsurance" />
+        <result column="social_assistance_welfare_subsidy" property="socialAssistanceWelfareSubsidy" />
+        <result column="foster_care_services" property="fosterCareServices" />
+        <result column="rehabilitation" property="rehabilitation" />
+        <result column="accessibility_improvement" property="accessibilityImprovement" />
+        <result column="education" property="education" />
+        <result column="culture_sports" property="cultureSports" />
+        <result column="employment" property="employment" />
+        <result column="poverty_alleviation" property="povertyAlleviation" />
+        <result column="rights_protection" property="rightsProtection" />
+        <result column="improvement_basic_living_conditions" property="improvementBasicLivingConditions" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID, social_insurance, social_assistance_welfare_subsidy, foster_care_services, rehabilitation, accessibility_improvement, education, culture_sports, employment, poverty_alleviation, rights_protection, improvement_basic_living_conditions
+    </sql>
+
+</mapper>

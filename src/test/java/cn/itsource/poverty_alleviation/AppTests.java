@@ -1,10 +1,10 @@
-package com.example.poverty_alleviation;
+package cn.itsource.poverty_alleviation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PovertyAlleviationApplicationTests {
+class AppTests {
 
     @Test
     void contextLoads() {

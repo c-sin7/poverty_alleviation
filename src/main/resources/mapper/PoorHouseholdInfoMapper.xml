@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itsource.poverty_alleviation.mapper.PoorHouseholdInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.itsource.poverty_alleviation.domain.PoorHouseholdInfo">
+        <id column="ID" property="id" />
+        <result column="name" property="name" />
+        <result column="gender" property="gender" />
+        <result column="ethnicity" property="ethnicity" />
+        <result column="disability_certificate" property="disabilityCertificate" />
+        <result column="id_card_number" property="idCardNumber" />
+        <result column="residence" property="residence" />
+        <result column="family_size" property="familySize" />
+        <result column="disability_condition" property="disabilityCondition" />
+        <result column="contact_number" property="contactNumber" />
+        <result column="family_income" property="familyIncome" />
+        <result column="housing_situation" property="housingSituation" />
+        <result column="education_level" property="educationLevel" />
+        <result column="marital_status" property="maritalStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID, name, gender, ethnicity, disability_certificate, id_card_number, residence, family_size, disability_condition, contact_number, family_income, housing_situation, education_level, marital_status
+    </sql>
+
+</mapper>

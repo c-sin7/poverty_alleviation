@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itsource.poverty_alleviation.mapper.SupportSituationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.itsource.poverty_alleviation.domain.SupportSituation">
+        <id column="ID" property="id" />
+        <result column="poor_household_id" property="poorHouseholdId" />
+        <result column="support_project" property="supportProject" />
+        <result column="support_content" property="supportContent" />
+        <result column="start_date" property="startDate" />
+        <result column="end_date" property="endDate" />
+        <result column="support_personnel" property="supportPersonnel" />
+        <result column="support_status" property="supportStatus" />
+        <result column="support_result" property="supportResult" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID, poor_household_id, support_project, support_content, start_date, end_date, support_personnel, support_status, support_result, remark
+    </sql>
+
+</mapper>
