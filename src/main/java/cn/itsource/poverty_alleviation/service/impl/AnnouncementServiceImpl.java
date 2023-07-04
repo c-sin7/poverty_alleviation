@@ -4,6 +4,7 @@ import cn.itsource.poverty_alleviation.domain.Announcement;
 import cn.itsource.poverty_alleviation.mapper.AnnouncementMapper;
 import cn.itsource.poverty_alleviation.service.AnnouncementService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,5 +17,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AnnouncementServiceImpl extends ServiceImpl<AnnouncementMapper, Announcement> implements AnnouncementService {
+    @Autowired
+    private AnnouncementMapper announcementMapper;
 
+    @Override
+    public Announcement selectAnnouncementInfoByAnnouncementId(Integer announcementId) {
+        return announcementMapper.selectAnnouncementInfoByAnnouncementId(announcementId);
+    }
 }
