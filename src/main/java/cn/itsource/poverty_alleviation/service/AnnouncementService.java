@@ -13,5 +13,4 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface AnnouncementService extends IService<Announcement> {
 
-    Announcement selectAnnouncementInfoById(Integer announcementId);
 }
