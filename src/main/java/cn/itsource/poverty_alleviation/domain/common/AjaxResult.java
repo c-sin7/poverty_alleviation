@@ -9,6 +9,7 @@ import java.util.HashMap;
  * 操作消息提醒
  * 
  * @author sin
+ * @since 2023-07-04
  */
 public class AjaxResult extends HashMap<String, Object>
 {

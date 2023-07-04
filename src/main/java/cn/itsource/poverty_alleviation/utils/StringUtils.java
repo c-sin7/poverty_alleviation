@@ -1,7 +1,9 @@
 package cn.itsource.poverty_alleviation.utils;
 
-import com.reason.common.constant.Constants;
-import com.reason.common.core.text.StrFormatter;
+import cn.itsource.poverty_alleviation.domain.common.Constants;
+
+
+import cn.itsource.poverty_alleviation.domain.common.StrFormatter;
 import org.springframework.util.AntPathMatcher;
 
 import java.util.*;
@@ -10,6 +12,7 @@ import java.util.*;
  * 字符串工具类
  * 
  * @author sin
+ * @since 2023-07-04
  */
 public class StringUtils extends org.apache.commons.lang3.StringUtils
 {
@@ -323,7 +326,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils
     /**
      * 判断给定的set列表中是否包含数组array 判断给定的数组array中是否包含给定的元素value
      *
-     * @param set 给定的集合
+     * @param 'set' 给定的集合
      * @param array 给定的数组
      * @return boolean 结果
      */

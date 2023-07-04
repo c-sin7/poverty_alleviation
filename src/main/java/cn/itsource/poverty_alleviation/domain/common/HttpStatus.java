@@ -1,8 +1,10 @@
 package cn.itsource.poverty_alleviation.domain.common;
 
 /**
+ * 返回状态码
+ *
  * @Author sin
- * @Description 返回状态码
+ * @since 2023-07-04
  */
 public class HttpStatus
 {

@@ -13,6 +13,7 @@ import java.util.Map;
  * Entity基类
  * 
  * @author sin
+ * @since 2023-07-04
  */
 public class BaseEntity implements Serializable
 {
